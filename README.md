@@ -1,5 +1,13 @@
 # DDGB.PythonTutorial.io
-IKT Projectmunka | 4 fő
+> IKT Projectmunka
+
+> [Weboldal](https://bbpezsgo.github.io/DDGB.PythonTutorial.io/)
+
+**Tagok:**
+- Domokos Balázs
+- Gadnai Gergő
+- Dudas René
+- Bánszky Balázs
 
 # Feladat:
 - **Készíts weblapot**, amely a Python programozási nyelv tanulóknak segít (eljárás/függvény-ig)
@@ -11,3 +19,10 @@ IKT Projectmunka | 4 fő
 - **Kvíz** az elméleti részekhez.
 
 > Határidő: 2022. 01. 04.
+
+# Feladatok:
+- [ ] A weboldal alapja, felépítése
+- [ ] Szövegek, oktatóanyagok
+- [ ] Oktatóvideók
+- [ ] A weboldal véglegeshez hasonló formája
+- [ ] Kvuiz kérdések
