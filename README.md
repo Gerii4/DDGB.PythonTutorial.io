@@ -21,76 +21,76 @@
 > Határidő: 2022. 01. 04.
 
 # Feladatok:
-- [x] A weboldal alapja
-- [ ] A weboldal véglegeshez hasonló formája
+- ✔️ A weboldal alapja
+- ✖ A weboldal véglegeshez hasonló formája
 
 **Python csoportok:**
 - Szintaxis
-  - [ ] Leírás
-  - [ ] Példa
-  - [ ] Ellenőrzőkvíz
+  - ✖ Leírás
+  - ✖ Példa
+  - ✖ Ellenőrzőkvíz
 - Változók és adattípusok
-  - [ ] Leírás
-  - [ ] Példa
-  - [ ] Ellenőrzőkvíz
+  - ✖ Leírás
+  - ✖ Példa
+  - ✖ Ellenőrzőkvíz
 - Számok
-  - [ ] Leírás
-  - [ ] Példa
-  - [ ] Ellenőrzőkvíz
+  - ✖ Leírás
+  - ✖ Példa
+  - ✖ Ellenőrzőkvíz
 - String-ek
-  - [ ] Leírás
-  - [ ] Példa
-  - [ ] Ellenőrzőkvíz
+  - ✖ Leírás
+  - ✖ Példa
+  - ✖ Ellenőrzőkvíz
 - Bemenet, kimenet
-  - [ ] Leírás
-  - [ ] Példa
-  - [ ] Oktatóvideó
-  - [ ] Ellenőrzőkvíz
+  - ✖ Leírás
+  - ✖ Példa
+  - ✖ Oktatóvideó
+  - ✖ Ellenőrzőkvíz
 - Átkonvertálás
-  - [ ] Leírás
-  - [ ] Példa
-  - [ ] Oktatóvideó
-  - [ ] Ellenőrzőkvíz
+  - ✖ Leírás
+  - ✖ Példa
+  - ✖ Oktatóvideó
+  - ✖ Ellenőrzőkvíz
 - Boolean-ok
-  - [ ] Leírás
-  - [ ] Példa
-  - [ ] Ellenőrzőkvíz
+  - ✖ Leírás
+  - ✖ Példa
+  - ✖ Ellenőrzőkvíz
 - Elágazások (if elif else)
-  - [ ] Leírás
-  - [ ] Példa
-  - [ ] Oktatóvideó
-  - [ ] Ellenőrzőkvíz
+  - ✖ Leírás
+  - ✖ Példa
+  - ✖ Oktatóvideó
+  - ✖ Ellenőrzőkvíz
 - Listák
-  - [ ] Leírás
-  - [ ] Példa
-  - [ ] Ellenőrzőkvíz
+  - ✖ Leírás
+  - ✖ Példa
+  - ✖ Ellenőrzőkvíz
 - For
-  - [ ] Leírás
-  - [ ] Példa
-  - [ ] Oktatóvideó
-  - [ ] Ellenőrzőkvíz
+  - ✖ Leírás
+  - ✖ Példa
+  - ✖ Oktatóvideó
+  - ✖ Ellenőrzőkvíz
 - While
-  - [ ] Leírás
-  - [ ] Példa
-  - [ ] Oktatóvideó
-  - [ ] Ellenőrzőkvíz
+  - ✖ Leírás
+  - ✖ Példa
+  - ✖ Oktatóvideó
+  - ✖ Ellenőrzőkvíz
 - Function-ok
-  - [ ] Leírás
-  - [ ] Példa
-  - [ ] Oktatóvideó
-  - [ ] Ellenőrzőkvíz
+  - ✖ Leírás
+  - ✖ Példa
+  - ✖ Oktatóvideó
+  - ✖ Ellenőrzőkvíz
 - Class-ok
-  - [ ] Leírás
-  - [ ] Példa
-  - [ ] Oktatóvideó
-  - [ ] Ellenőrzőkvíz
+  - ✖ Leírás
+  - ✖ Példa
+  - ✖ Oktatóvideó
+  - ✖ Ellenőrzőkvíz
 - Class builder
-  - [ ] Leírás
-  - [ ] Példa
-  - [ ] Oktatóvideó
-  - [ ] Ellenőrzőkvíz
+  - ✖ Leírás
+  - ✖ Példa
+  - ✖ Oktatóvideó
+  - ✖ Ellenőrzőkvíz
 - Try...Except
-  - [ ] Leírás
-  - [ ] Példa
-  - [ ] Oktatóvideó
-  - [ ] Ellenőrzőkvíz
+  - ✖ Leírás
+  - ✖ Példa
+  - ✖ Oktatóvideó
+  - ✖ Ellenőrzőkvíz
