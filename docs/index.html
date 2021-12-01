@@ -1,1 +1,375 @@
-This is a blank page
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div style="display: flex;flex-direction: column;height: 100%;">
+
+        <div class="navbar">
+            <a href="https://www.python.org/" target="_blank"><img src="https://www.python.org/static/img/python-logo.png"></a>
+            <a href="#" class="button right">Készítők</a>
+            <a href="#" class="button right">Források</a>
+        </div>
+
+        <div style="position: absolute; top: 50px; bottom: 0px; width: 100%;display: flex;">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'lsn1')" id="defaultOpen">Szintaxis</button>
+                <button class="tablinks" onclick="openCity(event, 'lsn2')">Változók és adattípusok</button>
+                <button class="tablinks" onclick="openCity(event, 'lsn3')">Számok</button>
+                <button class="tablinks" onclick="openCity(event, 'lsn4')">String-ek</button>
+                <button class="tablinks" onclick="openCity(event, 'lsn5')">Bemenet, kimenet</button>
+                <button class="tablinks" onclick="openCity(event, 'lsn6')">Átkonvertálás</button>
+                <button class="tablinks" onclick="openCity(event, 'lsn7')">Boolean-ok</button>
+                <button class="tablinks" onclick="openCity(event, 'lsn8')">Elágazások</button>
+                <button class="tablinks" onclick="openCity(event, 'lsn9')">Listák</button>
+                <button class="tablinks" onclick="openCity(event, 'lsn10')">For</button>
+                <button class="tablinks" onclick="openCity(event, 'lsn11')">While</button>
+                <button class="tablinks" onclick="openCity(event, 'lsn12')">Function-ok</button>
+                <button class="tablinks" onclick="openCity(event, 'lsn13')">Class-ok</button>
+                <button class="tablinks" onclick="openCity(event, 'lsn14')">lass builder</button>
+                <button class="tablinks" onclick="openCity(event, 'lsn15')">Try...Except</button>
+            </div>
+
+            <div class="content">
+                <div id="lsn1" class="tabcontent">
+                    <h1>Cím</h1>
+                    
+                    <p>Leírás</p>
+
+                    <div class="tip">
+                        This is a tipp
+                    </div>
+                    
+                    <p>Leírás</p>
+
+                    <div class="warn">
+                        This is a warning
+                    </div>
+                    
+                    <p>Leírás</p>
+
+                    <div id="myDiv" class="code">
+                        if True:<br>
+                        &emsp;&emsp;print("yes")<br>
+                        elif False:<br>
+                        &emsp;&emsp;print('nonn')<br>
+                        else:<br>
+                        &emsp;&emsp;input("a")<br>
+                        for 0 in range(5):<br><br>
+
+                        while True:<br>
+                        &emsp;&emsp;break:<br>
+                    </div>
+
+                    <p>Leírás</p>
+
+                    <div class="nextPrevButtons">
+                        <button onclick="openCity2('lsn2')" style="float: right;">Következő</button>
+                    </div>
+                </div>
+
+                <div id="lsn2" class="tabcontent">
+                    <h1>Cím</h1>
+
+                    <div class="nextPrevButtons">
+                        <button onclick="openCity2('lsn1')">Vissza</button>
+                        <button onclick="openCity2('lsn3')" style="float: right;">Következő</button>
+                    </div>
+                </div>
+
+                <div id="lsn3" class="tabcontent">
+                    <h1>Cím</h1>
+
+                    <div class="nextPrevButtons">
+                        <button onclick="openCity2('lsn2')">Vissza</button>
+                        <button onclick="openCity2('lsn4')" style="float: right;">Következő</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        function openCity2(cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+        }
+
+        document.getElementById("defaultOpen").click();
+    </script>
+
+    <script>
+        var elms = document.getElementsByClassName("code")
+        for (let i = 0; i < elms.length; i++) {
+            w3CodeColor(elms[i]);
+        }
+
+        function w3CodeColor(elmnt) {
+            var elmntObj = (document.getElementById(elmnt) || elmnt);
+            var elmntTxt = elmntObj.innerHTML;
+            var commentColor = "#6a9955";
+            var defaultColor = "#d4d4d4";
+            var keywordColor = "#c586c0";
+            var stringColor = "#ce9178";
+            var numberColor = "#b5cea8";
+            var constantColor = "#569cd6";
+            var propertyColor = "#9cdcfe";
+            var functionColor = "#dcdcaa";
+            var classColor = "#4ec9b0";
+            elmntTxt = pyMode(elmntTxt);
+            elmntObj.innerHTML = elmntTxt;
+
+            function extract(str, start, end, func, repl) {
+                var s, e, d = "", a = [];
+                while (str.search(start) > -1) {
+                    s = str.search(start);
+                    e = str.indexOf(end, s);
+                    if (e == -1) { e = str.length; }
+                    if (repl) {
+                        a.push(func(str.substring(s, e + (end.length))));
+                        str = str.substring(0, s) + repl + str.substr(e + (end.length));
+                    } else {
+                        d += str.substring(0, s);
+                        d += func(str.substring(s, e + (end.length)));
+                        str = str.substr(e + (end.length));
+                    }
+                }
+                this.rest = d + str;
+                this.arr = a;
+            }
+
+            function commentMode(txt) {
+                return "<span style=color:" + commentColor + ">" + txt + "</span>";
+            }
+
+            function pyMode(txt) {
+                var rest = txt, done = "", esc = [], i, cc, tt = "", functionpos, classpos, sfnuttpos, dfnuttpos, compos, comlinepos, keywordpos, numpos, mypos, dotpos, y, constantpos;
+                for (i = 0; i < rest.length; i++) {
+                    cc = rest.substr(i, 1);
+                    if (cc == "\\") {
+                        esc.push(rest.substr(i, 2));
+                        cc = "W3JSESCAPE";
+                        i++;
+                    }
+                    tt += cc;
+                }
+                rest = tt;
+                y = 1;
+                while (y == 1) {
+                    sfnuttpos = getPos(rest, "'", "'", pyStringMode);
+                    dfnuttpos = getPos(rest, '"', '"', pyStringMode);
+                    compos = getPos(rest, /\/\*/, "*/", commentMode);
+                    comlinepos = getPos(rest, /\/\//, "<br>", commentMode);
+                    numpos = getNumPos(rest, pyNumberMode);
+                    keywordpos = getKeywordPos("js", rest, pyKeywordMode);
+                    constantpos = getConstantPos("js", rest, pyConstantMode);
+                    functionpos = getFunctionPos("js", rest, pyFunctionMode);
+                    classpos = getClassPos("js", rest, pyClassMode);
+                    dotpos = getDotPos(rest, pyPropertyMode);
+                    if (Math.max(numpos[0], sfnuttpos[0], dfnuttpos[0], compos[0], comlinepos[0], keywordpos[0], dotpos[0], constantpos[0], functionpos[0], classpos[0]) == -1) { break; }
+                    mypos = getMinPos(numpos, sfnuttpos, dfnuttpos, compos, comlinepos, keywordpos, dotpos, constantpos, functionpos, classpos);
+                    if (mypos[0] == -1) { break; }
+                    if (mypos[0] > -1) {
+                        done += rest.substring(0, mypos[0]);
+                        done += mypos[2](rest.substring(mypos[0], mypos[1]));
+                        rest = rest.substr(mypos[1]);
+                    }
+                }
+                rest = done + rest;
+                for (i = 0; i < esc.length; i++) {
+                    rest = rest.replace("W3JSESCAPE", esc[i]);
+                }
+                return "<span style=color:" + defaultColor + ">" + rest + "</span>";
+            }
+            function pyStringMode(txt) {
+                return "<span style=color:" + stringColor + ">" + txt + "</span>";
+            }
+            function pyKeywordMode(txt) {
+                return "<span style=color:" + keywordColor + ">" + txt + "</span>";
+            }
+            function pyConstantMode(txt) {
+                return "<span style=color:" + constantColor + ">" + txt + "</span>";
+            }
+            function pyNumberMode(txt) {
+                return "<span style=color:" + numberColor + ">" + txt + "</span>";
+            }
+            function pyPropertyMode(txt) {
+                return "<span style=color:" + propertyColor + ">" + txt + "</span>";
+            }
+            function pyFunctionMode(txt) {
+                return "<span style=color:" + functionColor + ">" + txt + "</span>";
+            }
+            function pyClassMode(txt) {
+                return "<span style=color:" + classColor + ">" + txt + "</span>";
+            }
+
+            function getDotPos(txt, func) {
+                var x, i, j, s, e, arr = [".", "<", " ", ";", "(", "+", ")", "[", "]", ",", "&", ":", "{", "}", "/", "-", "*", "|", "%"];
+                s = txt.indexOf(".");
+                if (s > -1) {
+                    x = txt.substr(s + 1);
+                    for (j = 0; j < x.length; j++) {
+                        cc = x[j];
+                        for (i = 0; i < arr.length; i++) {
+                            if (cc.indexOf(arr[i]) > -1) {
+                                e = j;
+                                return [s + 1, e + s + 1, func];
+                            }
+                        }
+                    }
+                }
+                return [-1, -1, func];
+            }
+            function getMinPos() {
+                var i, arr = [];
+                for (i = 0; i < arguments.length; i++) {
+                    if (arguments[i][0] > -1) {
+                        if (arr.length == 0 || arguments[i][0] < arr[0]) { arr = arguments[i]; }
+                    }
+                }
+                if (arr.length == 0) { arr = arguments[i]; }
+                return arr;
+            }
+
+            function getKeywordPos(typ, txt, func) {
+                var words, i, pos, rpos = -1, rpos2 = -1, patt;
+                if (typ == "js") {
+                    words = ["do", "while", "bool", "break", "def", "if", "elif", "else", "for", "in"];
+                }
+                for (i = 0; i < words.length; i++) {
+                    pos = txt.indexOf(words[i]);
+                    if (pos > -1) {
+                        patt = /\W/g;
+                        if (txt.substr(pos + words[i].length, 1).match(patt) && txt.substr(pos - 1, 1).match(patt)) {
+                            if (pos > -1 && (rpos == -1 || pos < rpos)) {
+                                rpos = pos;
+                                rpos2 = rpos + words[i].length;
+                            }
+                        }
+                    }
+                }
+                return [rpos, rpos2, func];
+            }
+            function getConstantPos(typ, txt, func) {
+                var words, i, pos, rpos = -1, rpos2 = -1, patt;
+                if (typ == "js") {
+                    words = ["True", "False"];
+                }
+                for (i = 0; i < words.length; i++) {
+                    pos = txt.indexOf(words[i]);
+                    if (pos > -1) {
+                        patt = /\W/g;
+                        if (txt.substr(pos + words[i].length, 1).match(patt) && txt.substr(pos - 1, 1).match(patt)) {
+                            if (pos > -1 && (rpos == -1 || pos < rpos)) {
+                                rpos = pos;
+                                rpos2 = rpos + words[i].length;
+                            }
+                        }
+                    }
+                }
+                return [rpos, rpos2, func];
+            }
+            function getFunctionPos(typ, txt, func) {
+                var words, i, pos, rpos = -1, rpos2 = -1, patt;
+                if (typ == "js") {
+                    words = ["print", "input"];
+                }
+                for (i = 0; i < words.length; i++) {
+                    pos = txt.indexOf(words[i]);
+                    if (pos > -1) {
+                        patt = /\W/g;
+                        if (txt.substr(pos + words[i].length, 1).match(patt) && txt.substr(pos - 1, 1).match(patt)) {
+                            if (pos > -1 && (rpos == -1 || pos < rpos)) {
+                                rpos = pos;
+                                rpos2 = rpos + words[i].length;
+                            }
+                        }
+                    }
+                }
+                return [rpos, rpos2, func];
+            }
+            function getClassPos(typ, txt, func) {
+                var words, i, pos, rpos = -1, rpos2 = -1, patt;
+                if (typ == "js") {
+                    words = ["str", "int", "range"];
+                }
+                for (i = 0; i < words.length; i++) {
+                    pos = txt.indexOf(words[i]);
+                    if (pos > -1) {
+                        patt = /\W/g;
+                        if (txt.substr(pos + words[i].length, 1).match(patt) && txt.substr(pos - 1, 1).match(patt)) {
+                            if (pos > -1 && (rpos == -1 || pos < rpos)) {
+                                rpos = pos;
+                                rpos2 = rpos + words[i].length;
+                            }
+                        }
+                    }
+                }
+                return [rpos, rpos2, func];
+            }
+
+            function getPos(txt, start, end, func) {
+                var s, e;
+                s = txt.search(start);
+                e = txt.indexOf(end, s + (end.length));
+                if (e == -1) { e = txt.length; }
+                return [s, e + (end.length), func];
+            }
+            function getNumPos(txt, func) {
+                var arr = ["<br>", " ", ";", "(", "+", ")", "[", "]", ",", "&", ":", "{", "}", "/", "-", "*", "|", "%", "="], i, j, c, startpos = 0, endpos, word;
+                for (i = 0; i < txt.length; i++) {
+                    for (j = 0; j < arr.length; j++) {
+                        c = txt.substr(i, arr[j].length);
+                        if (c == arr[j]) {
+                            if (c == "-" && (txt.substr(i - 1, 1) == "e" || txt.substr(i - 1, 1) == "E")) {
+                                continue;
+                            }
+                            endpos = i;
+                            if (startpos < endpos) {
+                                word = txt.substring(startpos, endpos);
+                                if (!isNaN(word)) { return [startpos, endpos, func]; }
+                            }
+                            i += arr[j].length;
+                            startpos = i;
+                            i -= 1;
+                            break;
+                        }
+                    }
+                }
+                return [-1, -1, func];
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
