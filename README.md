@@ -55,7 +55,7 @@
   - ✖ Leírás
   - ✖ Példa
   - ✖ Ellenőrzőkvíz
-- Elágazások (if elif else)
+- Elágazások
   - ✖ Leírás
   - ✖ Példa
   - ✖ Oktatóvideó

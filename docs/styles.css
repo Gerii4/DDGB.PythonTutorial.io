@@ -34,7 +34,7 @@ body {
 .navbar .button {
     float: left;
     display: block;
-    color: white;
+    color: #ccc;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
@@ -44,6 +44,17 @@ body {
 
 .navbar .button.right {
     float: right;
+}
+
+.navbar .center {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    color: #fff;
+    font-size: larger;
+    font-weight: bold;
 }
 
 .navbar .button:hover {
@@ -79,9 +90,10 @@ body {
     text-align: left;
     cursor: pointer;
     transition: 0.3s;
-    font-size: 17px;
+    font-size: 19px;
     border-radius: 5px;
     overflow: hidden;
+    font-weight: 600;
 }
 
 .tab button:hover {
