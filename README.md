@@ -22,7 +22,75 @@
 
 # Feladatok:
 - [ ] A weboldal alapja, felépítése
-- [ ] Szövegek, oktatóanyagok
-- [ ] Oktatóvideók
 - [ ] A weboldal véglegeshez hasonló formája
-- [ ] Kvuiz kérdések
+
+**Python csoportok:**
+- Szintaxis
+  - [ ] Leírás
+  - [ ] Példa
+  - [ ] Ellenőrzőkvíz
+- Változók és adattípusok
+  - [ ] Leírás
+  - [ ] Példa
+  - [ ] Ellenőrzőkvíz
+- Számok
+  - [ ] Leírás
+  - [ ] Példa
+  - [ ] Ellenőrzőkvíz
+- String-ek
+  - [ ] Leírás
+  - [ ] Példa
+  - [ ] Ellenőrzőkvíz
+- Bemenet, kimenet
+  - [ ] Leírás
+  - [ ] Példa
+  - [ ] Oktatóvideó
+  - [ ] Ellenőrzőkvíz
+- Átkonvertálás
+  - [ ] Leírás
+  - [ ] Példa
+  - [ ] Oktatóvideó
+  - [ ] Ellenőrzőkvíz
+- Boolean-ok
+  - [ ] Leírás
+  - [ ] Példa
+  - [ ] Ellenőrzőkvíz
+- Elágazások (if elif else)
+  - [ ] Leírás
+  - [ ] Példa
+  - [ ] Oktatóvideó
+  - [ ] Ellenőrzőkvíz
+- Listák
+  - [ ] Leírás
+  - [ ] Példa
+  - [ ] Ellenőrzőkvíz
+- For
+  - [ ] Leírás
+  - [ ] Példa
+  - [ ] Oktatóvideó
+  - [ ] Ellenőrzőkvíz
+- While
+  - [ ] Leírás
+  - [ ] Példa
+  - [ ] Oktatóvideó
+  - [ ] Ellenőrzőkvíz
+- Function-ok
+  - [ ] Leírás
+  - [ ] Példa
+  - [ ] Oktatóvideó
+  - [ ] Ellenőrzőkvíz
+- Class-ok
+  - [ ] Leírás
+  - [ ] Példa
+  - [ ] Oktatóvideó
+  - [ ] Ellenőrzőkvíz
+- Class builder
+  - [ ] Leírás
+  - [ ] Példa
+  - [ ] Oktatóvideó
+  - [ ] Ellenőrzőkvíz
+- Try...Except
+  - [ ] Leírás
+  - [ ] Példa
+  - [ ] Oktatóvideó
+  - [ ] Ellenőrzőkvíz
