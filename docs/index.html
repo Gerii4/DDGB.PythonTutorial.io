@@ -5,6 +5,64 @@
     <title>Page Title</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 3;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #fff;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            background-color: #B71C1C;
+            padding: 0px 8px;
+            border-radius: 10px;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+            background-color: #EF5350;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,10 +70,10 @@
     <div style="display: flex; flex-direction: column; height: 100%;">
 
         <div class="navbar">
-            <a href="https://www.python.org/" target="_blank"><img src="https://www.python.org/static/img/python-logo.png"></a>
-            <p class="center">Python kezdőknek</p>
-            <a href="#" class="button right">Készítők</a>
-            <a href="#" class="button right">Források</a>
+            <a href="https://www.python.org/" target="_blank"><img src="logo.png"></a>
+            <p>Python kezdőknek</p>
+            <a href="#" class="button right" onclick="ShowModal(1)">Készítők</a>
+            <a href="#" class="button right" onclick="ShowModal(0)">Források</a>
         </div>
 
         <div style="position: absolute; top: 50px; bottom: 0px; width: 100%; display: flex;">
@@ -40,19 +98,19 @@
             <div class="content">
                 <div id="lsn1" class="tabcontent">
                     <h1>Cím</h1>
-                    
+
                     <p>Leírás</p>
 
                     <div class="tip">
                         This is a tipp
                     </div>
-                    
+
                     <p>Leírás</p>
 
                     <div class="warn">
                         This is a warning
                     </div>
-                    
+
                     <p>Leírás</p>
 
                     <div id="myDiv" class="code">
@@ -69,6 +127,8 @@
                     </div>
 
                     <p>Leírás</p>
+
+                    <iframe src="quiz/1.html"></iframe>
 
                     <div class="nextPrevButtons">
                         <button onclick="openCity2('lsn2')" style="float: right;">Következő</button>
@@ -93,6 +153,42 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+    </div>
+
+    <div id="modal0" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="https://www.w3schools.com/favicon.ico" width="16px" height="16px">
+            <a href="https://www.w3schools.com/" target="_blank">www.w3schools.com</a><br>
+            <img src="https://www.python.org/favicon.ico" width="16px" height="16px">
+            <a href="https://www.python.org/" target="_blank">www.python.org</a><br>
+            <img src="https://stackoverflow.com/favicon.ico" width="16px" height="16px">
+            <a href="https://stackoverflow.com/questions/2434602/setting-width-height-as-percentage-minus-pixels"
+                target="_blank">www.stackoverflow.com</a><br>
+            <img src="https://www.geeksforgeeks.org/favicon.ico" width="16px" height="16px">
+            <a href="https://www.geeksforgeeks.org/how-to-insert-spaces-tabs-in-text-using-html-css/"
+                target="_blank">www.geeksforgeeks.org</a><br>
+            <img src="https://materialui.co/favicon.gif" width="16px" height="16px">
+            <a href="https://materialui.co/colors/" target="_blank">materialui.co</a><br>
+            <img src="https://css-tricks.com/favicon.ico" width="16px" height="16px">
+            <a href="https://css-tricks.com/snippets/css/multiple-borders/" target="_blank">css-tricks.com</a>
+        </div>
+
+    </div>
+
+    <div id="modal1" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            Domokos Balázs<br>
+            Dudas René<br>
+            Gadnai Gergő<br>
+            Bánszky Balázs
         </div>
 
     </div>
@@ -369,6 +465,38 @@
             }
         }
 
+    </script>
+
+    <script>
+
+        var modals = []
+
+        for (let i = 0; i < 10; i++) {
+            if (document.getElementById("modal" + i)) {
+                modals.push(document.getElementById("modal" + i))
+            }
+        }
+
+        var spans = document.getElementsByClassName("close");
+
+        function ShowModal(index) {
+            modals[index].style.display = "block";
+        }
+
+        spans[0].onclick = function () {
+            modals[0].style.display = "none";
+        }
+        spans[1].onclick = function () {
+            modals[1].style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
     </script>
 
 </body>
