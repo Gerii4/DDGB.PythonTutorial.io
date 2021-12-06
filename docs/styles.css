@@ -218,3 +218,22 @@ iframe {
     height: 600px;
     border-radius: 10px;
 }
+
+video {
+    width: 100%;
+    margin: 20px 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #000;
+}
+
+.inlineContent {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px 0px;
+}
+
+.inlineContent > h2 {
+    font-size: larger;
+    margin-top: 0px;
+}
